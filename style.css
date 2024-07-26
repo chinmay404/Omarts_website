@@ -1,7 +1,7 @@
 body {
     margin: 0;
     overflow: hidden; /* Prevent scrolling during animation */
-    background: linear-gradient(to bottom, rgb(229, 39, 39), rgb(255, 255, 255)); 
+    background: linear-gradient(to bottom, rgb(233, 233, 233), rgb(255, 255, 255)); 
 	background: linear-gradient(to bottom, rgb(229, 39, 39), rgb(255, 255, 255));/* White background for the whole page */
 }
 
@@ -18,7 +18,7 @@ body {
 #ganesh {
     height: 100vh;
     width: auto;
-    background: linear-gradient(to bottom, rgb(229, 39, 39), rgb(255, 255, 255)); /* White background */
+    background: linear-gradient(to bottom, rgb(212, 212, 212), rgb(255, 255, 255)); /* White background */
     position: absolute;
     top: 50%;
     left: 50%;
