@@ -23,7 +23,7 @@ function svgDraw() {
 		document.body.classList.add('fade-out');
 		// Redirect to index.html after the fade-out animation completes
 		setTimeout(() => {
-			window.location.href = 'home.html';
+			window.location.href = 'test2.html';
 		}, 1000); // Match the duration of the fade-out animation
 	}, 5000);
 }
