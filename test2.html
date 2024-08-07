@@ -145,6 +145,14 @@
             height: 400px;
             border: 0;
         }
+        #dynamicButton {
+    transition: border-color 0.5s, color 0.5s;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-width: 2px;
+}
+
     </style>
 </head>
 
@@ -166,18 +174,16 @@
                     <a class="nav-link" href="#contact">संपर्क <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="home.html" >5 फुटी </a>
+                    <a class="nav-link" href="10fts.html" >मूर्ती </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">2 फुटी</a>
-                </li>
+
             </ul>
         </div>
     </nav>
 
     <div class="whatsapp_float">
         <!-- Instagram Icon -->
-        <a href="https://www.instagram.com/yourusername" target="_blank">
+        <a href="https://www.instagram.com/om_arts_2021" target="_blank">
             <img src="./Instagram_logo_2022.svg" alt="Instagram" style="width: 40px;">
         </a>
         <!-- WhatsApp Icon -->
@@ -201,8 +207,7 @@
                     <div class="inner mt-4">
                         <p style="font-size: x-large; font-weight: 800;">श्रींची मूर्ती</p>
                         <div class="container">
-                            <a href="home.html" class="btn btn-primary mr-2">5 फुटी</a>
-                            <a href="home.html" class="btn btn-primary">2 फुटी</a>
+                            <a id="dynamicButtdon" href="10fts.html" class="btn btn-primary mr-2" style="width: 50vw;">पहा <i class="arrow right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -216,14 +221,11 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             ">
                 <p>
-                    <strong>आपल्या गणपतीच्या उत्सवाला खास बनव</strong>
+                    <strong>आपल्या गणपतीच्या उत्सवाला खास बनवा</strong>
                     <br><br>
                     आम्ही सुंदर, विविध आकारांच्या मूर्त्या उपलब्ध करून देतो, ज्या आपल्या घरात
                     <strong>आनंद, श्रद्धा आणि आस्था</strong> आणतील.
                     <br><br>
-                    आमच्या मूर्त्या केवळ सुंदरच नाहीत, तर प्रत्येक मूर्ती <strong>एक दिव्य अनुभव</strong>
-                    प्रदान करते. आपल्या गणपतीसाठी आमच्या समर्पित आणि अद्वितीय मूर्त्यांचा अनुभव घ्या आणि आपल्या उत्सवाला
-                    <strong>विशेष रंग आणि पावित्र्य</strong> द्या!
                 </p>
             </div>
         </div>
@@ -263,9 +265,9 @@
                         <i class="fab fa-instagram"></i> Instagram
                     </a><br>
                     <a href="tel:+918956924297">
-                        <i class="fas fa-phone-alt"></i> +91 8956924297
+                        <i class="fas fa-phone-alt"></i> +91 89569 24297
                     </a><br>
-                    <a href="https://wa.me/+919172001571" target="_blank">
+                    <a href="https://wa.me/+918956924297" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
@@ -276,10 +278,10 @@
                     <a href="https://www.instagram.com/pranav_jr" target="_blank">
                         <i class="fab fa-instagram"></i> Instagram
                     </a><br>
-                    <a href="tel:+919209021611">
-                        <i class="fas fa-phone-alt"></i> +91 9209021611
+                    <a href="tel:+91 9209021611">
+                        <i class="fas fa-phone-alt"></i> +91 92090 21611
                     </a><br>
-                    <a href="https://wa.me/+919172001572" target="_blank">
+                    <a href="https://wa.me/+919209021611" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
@@ -322,6 +324,32 @@
             }
         });
     </script>
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    
+        function applyRandomStyles() {
+            const button = document.getElementById('dynamicButton');
+            const bgColor = getRandomColor();
+            const borderColor = getRandomColor();
+            button.style.backgroundColor = bgColor;
+            button.style.borderColor = borderColor;
+        }
+    
+        // Apply random styles when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            applyRandomStyles();
+            // Optional: Change colors every few seconds
+            setInterval(applyRandomStyles, 3000); // Change color every 3 seconds
+        });
+    </script>
+    
 </body>
 
 </html>
